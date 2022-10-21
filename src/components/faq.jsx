@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Navbar from "./nanvbar";
 const Faq = () => {
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
@@ -8,6 +8,10 @@ const Faq = () => {
     const [open5, setOpen5] = useState(false);
 
     return (
+        <>
+            {/* nav starts */}
+            <Navbar />
+            {/* nav ends */}
         <div className=" lg:container lg:mx-auto lg:py-16 md:py-12 md:px-6 py-12 px-4">
             <h1 className="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 font-semibold">FAQ's</h1>
 
@@ -149,7 +153,7 @@ const Faq = () => {
 
                 <hr className=" w-full lg:mt-10 my-8" />
             </div>
-        </div>
+        </div></>
     );
 };
 
