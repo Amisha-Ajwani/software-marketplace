@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
 
