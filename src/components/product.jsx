@@ -1,6 +1,7 @@
 import React from "react";
 import ProductThumb from "./ProductThumb";
-import displayData from "../data.json"
+import displayData from "../data.json";
+import Navbar from "./nanvbar";
 const Product = () => {
     // let productList = displayData;
     console.log(displayData);
@@ -11,12 +12,13 @@ console.log(productList);
 
     // console.log(productList);
     return (
+        <>
+            {/* nav starts */}
+            <Navbar />
+            {/* nav ends */}
         <div className=" 2xl:container 2xl:mx-auto">
-            <div className=" bg-gray-50 text-center lg:py-10 md:py-8 py-6">
-                <p className=" w-10/12 mx-auto md:w-full  font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-center text-gray-800">Summer Collection Vol-1</p>
-            </div>
             <div className=" py-6 lg:px-20 md:px-6 px-4">
-                <p className=" font-normal text-sm leading-3 text-gray-600 ">Home / Shop by Category / Women</p>
+                <p className=" font-normal text-sm leading-3 text-gray-600 ">Home / Shop by Category / Desktop</p>
                 <hr className=" w-full bg-gray-200 my-6" />
 
                 <div className=" flex justify-between items-center">
@@ -28,7 +30,7 @@ console.log(productList);
                         </svg>
                         <p className=" font-normal text-base leading-4 text-gray-800">Filter</p>
                     </div>
-                    <p className=" cursor-pointer hover:underline duration-100 font-normal text-base leading-4 text-gray-600">Showing 18 products</p>
+                    {/* <p className=" cursor-pointer hover:underline duration-100 font-normal text-base leading-4 text-gray-600">Showing 18 products</p> */}
                 </div>
 
                 <div className=" grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 lg:mt-12 mt-10">
@@ -122,6 +124,7 @@ console.log(productList);
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
